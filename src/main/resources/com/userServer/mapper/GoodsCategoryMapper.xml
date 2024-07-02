@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.userServer.mapper.GoodsCategoryMapper">
+
+    <resultMap id="Category" type="com.userServer.entity.GoodsCategory">
+        <id column="t1id" property="id"/>
+        <result column="t1cn" property="categoryName"/>
+        <result column="t1ct" property="categoryType"/>
+        <result column="t1pid" property="parentId"/>
+        <collection property="children" ofType="com.userServer.entity.GoodsCategory">
+            <id column="t2id" property="id"/>
+            <result column="t2cn" property="categoryName"/>
+            <result column="t2ct" property="categoryType"/>
+            <result column="t2pid" property="parentId"/>
+            <collection property="children" ofType="com.userServer.entity.GoodsCategory">
+                <id column="t3id" property="id"/>
+                <result column="t3cn" property="categoryName"/>
+                <result column="t3ct" property="categoryType"/>
+                <result column="t3pid" property="parentId"/>
+            </collection>
+        </collection>
+    </resultMap>
+
+    
+    <select id="findAllCategory" resultMap="Category">
+        SELECT t1.id t1id,t1.category_name t1cn,t1.category_type t1ct,t1.parent_id t1pid,
+        t2.id t2id,t2.category_name t2cn,t2.category_type t2ct,t2.parent_id t2pid,
+        t3.id t3id,t3.category_name t3cn,t3.category_type t3ct,t3.parent_id t3pid
+        FROM goods_category t1,goods_category t2,goods_category t3
+        WHERE t2.parent_id = t1.id and t3.parent_id = t2.id and t1.category_type = 1
+    </select>
+
+</mapper>

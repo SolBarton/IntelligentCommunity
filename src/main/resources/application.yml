@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://hkg1.clusters.zeabur.com:30396/IntelligentCommunity
+    username: root
+    password: 8Z4cExbCmUPylRJ56uX0W7N19YBD2Ia3
