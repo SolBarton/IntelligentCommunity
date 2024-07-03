@@ -1,8 +1,9 @@
 package com.userServer.service;
 
+import com.userServer.vo.ResultVO;
 
-public class GoodsCategoryService {
+public interface GoodsCategoryService {
 
-
+    ResultVO findAllCategory();
 
 }

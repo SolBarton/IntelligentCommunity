@@ -1,5 +1,8 @@
 package com.userServer.controller;
 
+import com.userServer.service.GoodsCategoryService;
+import com.userServer.vo.ResultVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,10 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/goodsCategory")
 public class GoodsCategoryController {
 
+    @Autowired
+    private GoodsCategoryService goodsCategoryService;
+
     @GetMapping("/findAllCategory")
-    public void findAllCategory() {
-        //继续创建业务层的代码逻辑(2024年7月3日)
-        //.......
+    public ResultVO findAllCategory() {
+        return goodsCategoryService.findAllCategory();//调用Service层下类的方法
     }
 
 }
