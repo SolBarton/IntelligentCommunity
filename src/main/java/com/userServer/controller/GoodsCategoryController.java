@@ -19,4 +19,9 @@ public class GoodsCategoryController {
         return goodsCategoryService.findAllCategory();//调用Service层下类的方法
     }
 
+    @GetMapping("/getCategoryType1")
+    public ResultVO getCategoryType1() {
+        return goodsCategoryService.getCategoryType1();//调用Service层下类的方法
+    }
+
 }

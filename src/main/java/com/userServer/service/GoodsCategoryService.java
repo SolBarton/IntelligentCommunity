@@ -6,4 +6,6 @@ public interface GoodsCategoryService {
 
     ResultVO findAllCategory();
 
+    ResultVO getCategoryType1();
+
 }

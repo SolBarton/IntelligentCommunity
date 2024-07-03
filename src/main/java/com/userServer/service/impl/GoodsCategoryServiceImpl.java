@@ -19,4 +19,7 @@ public class GoodsCategoryServiceImpl implements GoodsCategoryService {
         return ResultVO.success(goodsCategoryMapper.findAllCategory());//调用Mapper层下类的方法
     }
 
+    public ResultVO getCategoryType1() {
+        return ResultVO.success(goodsCategoryMapper.getCategoryType1());//调用Mapper层下类的方法
+    }
 }

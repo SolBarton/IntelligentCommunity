@@ -33,4 +33,9 @@
         WHERE t2.parent_id = t1.id and t3.parent_id = t2.id and t1.category_type = 1
     </select>
 
+    <select id="getCategoryType1" resultMap="Category">
+        SELECT id,category_name,category_type,parent_id FROM goods_category
+        WHERE parent_id = 0 or parent_id IS NULL
+    </select>
+
 </mapper>

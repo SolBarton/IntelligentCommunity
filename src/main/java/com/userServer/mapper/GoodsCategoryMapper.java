@@ -10,4 +10,5 @@ public interface GoodsCategoryMapper extends BaseMapper<GoodsCategory> {
 
     List<GoodsCategory> findAllCategory();
 
+    List<GoodsCategory> getCategoryType1();
 }
