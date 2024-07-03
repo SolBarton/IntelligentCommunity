@@ -21,22 +21,22 @@ public class ResultVO {
     }
 
     public static ResultVO success() {
-        ResultVO res = new ResultVO(0, "成功");
+        ResultVO res = new ResultVO(200, "成功");
         return res;
     }
 
     public static ResultVO success(String msg) {
-        ResultVO res = new ResultVO(0, msg);
+        ResultVO res = new ResultVO(200, msg);
         return res;
     }
 
     public static ResultVO success(Object data) {
-        ResultVO res = new ResultVO(0, "成功", data);
+        ResultVO res = new ResultVO(200, "成功", data);
         return res;
     }
 
     public static ResultVO success(String msg, Object data) {
-        ResultVO res = new ResultVO(0, msg, data);
+        ResultVO res = new ResultVO(200, msg, data);
         return res;
     }
 
