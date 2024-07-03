@@ -12,8 +12,8 @@ public class GoodsCategoryMapperTest {
     private GoodsCategoryMapper goodsCategoryMapper;
 
     @Test
-    public void findAllCategory() {
-        for (GoodsCategory goodsCategory : goodsCategoryMapper.findAllCategory()) {
+    public void getCategoryType23() {
+        for (GoodsCategory goodsCategory : goodsCategoryMapper.getCategoryType23(1)) {
             System.out.println(goodsCategory);//测试已通过
         }
     }
@@ -21,7 +21,7 @@ public class GoodsCategoryMapperTest {
     @Test
     public void getCategoryType1() {
         for (GoodsCategory goodsCategory : goodsCategoryMapper.getCategoryType1()) {
-            System.out.println(goodsCategory.getCategoryType1());//测试已通过
+            System.out.println(goodsCategory);//测试已通过
         }
     }
 }

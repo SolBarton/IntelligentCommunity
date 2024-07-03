@@ -15,8 +15,8 @@ public class GoodsCategoryServiceImpl implements GoodsCategoryService {
     private GoodsCategoryMapper goodsCategoryMapper;
 
     @Override
-    public ResultVO findAllCategory() {
-        return ResultVO.success(goodsCategoryMapper.findAllCategory());//调用Mapper层下类的方法
+    public ResultVO getCategoryType23(Integer id) {
+        return ResultVO.success(goodsCategoryMapper.getCategoryType23(id));//调用Mapper层下类的方法
     }
 
     @Override

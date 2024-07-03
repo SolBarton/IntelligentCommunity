@@ -14,9 +14,9 @@ public class GoodsCategoryController {
     @Autowired
     private GoodsCategoryService goodsCategoryService;
 
-    @GetMapping("/findAllCategory")
-    public ResultVO findAllCategory() {
-        return goodsCategoryService.findAllCategory();//调用Service层下类的方法
+    @GetMapping("/getCategoryType23")
+    public ResultVO getCategoryType23(Integer id) { //根据指定一级目录的id得到二级、三级目录
+        return goodsCategoryService.getCategoryType23(id);//调用Service层下类的方法
     }
 
     @GetMapping("/getCategoryType1")
