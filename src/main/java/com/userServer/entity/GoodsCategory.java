@@ -70,11 +70,6 @@ public class GoodsCategory {
         this.children = children;
     }
 
-    public String getCategoryType1() {
-        return "GoodsCategory{" +
-                "id=" + id +
-                ", categoryName='" + categoryName + '}';
-    }
 
     @Override
     public String toString() {
