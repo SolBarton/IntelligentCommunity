@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://hkg1.clusters.zeabur.com :30396</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="IntelligentCommunity@hkg1.clusters.zeabur.com" uuid="5aa998ae-74e9-4dd2-b1c8-19fb284656cd">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://hkg1.clusters.zeabur.com:30396/IntelligentCommunity</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
