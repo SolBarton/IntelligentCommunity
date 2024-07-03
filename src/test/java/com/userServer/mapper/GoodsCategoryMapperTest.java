@@ -18,4 +18,10 @@ public class GoodsCategoryMapperTest {
         }
     }
 
+    @Test
+    public void getCategoryType1() {
+        for (GoodsCategory goodsCategory : goodsCategoryMapper.getCategoryType1()) {
+            System.out.println(goodsCategory.getCategoryType1());//测试已通过
+        }
+    }
 }

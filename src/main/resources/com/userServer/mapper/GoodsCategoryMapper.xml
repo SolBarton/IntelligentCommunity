@@ -24,7 +24,12 @@
         </collection>
     </resultMap>
 
-    
+    <resultMap id="CategoryType1" type="com.userServer.entity.GoodsCategory">
+        <id column="id" property="id"/>
+        <result column="category_name" property="categoryName"/>
+    </resultMap>
+
+
     <select id="findAllCategory" resultMap="Category">
         SELECT t1.id t1id,t1.category_name t1cn,t1.category_type t1ct,t1.parent_id t1pid,
         t2.id t2id,t2.category_name t2cn,t2.category_type t2ct,t2.parent_id t2pid,
@@ -33,9 +38,11 @@
         WHERE t2.parent_id = t1.id and t3.parent_id = t2.id and t1.category_type = 1
     </select>
 
-    <select id="getCategoryType1" resultMap="Category">
-        SELECT id,category_name,category_type,parent_id FROM goods_category
+
+    <select id="getCategoryType1" resultMap="CategoryType1">
+        SELECT id,category_name FROM goods_category
         WHERE parent_id = 0 or parent_id IS NULL
     </select>
+
 
 </mapper>
