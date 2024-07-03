@@ -23,7 +23,7 @@
     },
     methods: {
       fetchCategories() {
-        axios.get('http://localhost:8080/findAllCategory')
+        axios.get('https://3f663d48-32d5-4c29-ba1c-93276107f271.mock.pstmn.io/findAll')
           .then(response => {
             this.categories = response.data;
           })
@@ -38,6 +38,7 @@
   <style scoped>
   .sidebar {
     width: 250px;
+    margin-top: 60px;
     background-color: #f0f0f0; /* 淡灰色背景 */
     padding: 1rem;
     position: fixed;
