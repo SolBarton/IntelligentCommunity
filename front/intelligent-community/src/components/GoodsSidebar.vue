@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <ul>
-      <li v-for="category in categories" :key="category.id">
+      <li v-for="category in categories" :key="category.id" @click="handleCategoryClick(category.id)">
         {{ category.categoryName }}
       </li>
     </ul>
@@ -13,6 +13,12 @@ import axios from 'axios';
 
 export default {
   name: 'GoodsSidebar',
+  props: {
+    onCategoryClick: {
+      type: Function,
+      required: true,
+    }
+  },
   data() {
     return {
       categories: []
@@ -33,6 +39,9 @@ export default {
       } catch (error) {
         console.error("There was an error fetching the categories!", error);
       }
+    },
+    handleCategoryClick(categoryId) {
+      this.onCategoryClick(categoryId); // 调用传入的点击处理函数
     }
   }
 }

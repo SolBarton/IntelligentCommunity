@@ -1,8 +1,31 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 // @ts-ignore
 import Topbar from '../components/Topbar.vue'
 // @ts-ignore
 import GoodsSidebar from '../components/GoodsSidebar.vue'
+// @ts-ignore
+import CategoryTree from '../components/CategoryTree.vue';
+import axios from 'axios';
+
+// 定义一个响应式变量用于存储类别详情
+const categoryDetails = ref([]);
+
+// 处理侧边栏点击事件
+const handleCategoryClick = async (categoryId: number) => {
+  try {
+    const response = await axios.get(`http://localhost:8080/goodsCategory/getCategoryType23`, {
+      params: { id: categoryId }
+    });
+    if (response.data.code === 200) {
+      categoryDetails.value = response.data.data;
+    } else {
+      console.error("Error fetching category details:", response.data.msg);
+    }
+  } catch (error) {
+    console.error("There was an error fetching the category details!", error);
+  }
+};
 
 // export default {
 //   name: 'Goods',
@@ -17,17 +40,23 @@ import GoodsSidebar from '../components/GoodsSidebar.vue'
     <div id="goods">
       <Topbar />
       <div class="content-wrapper">
-        <GoodsSidebar />
+        <!-- <GoodsSidebar /> -->
+        <GoodsSidebar :onCategoryClick="handleCategoryClick" />
         <div class="main-content">
-        <h1>这里是主页</h1>
-          <!-- 这里放其他内容，比如路由视图 -->
-          <router-view />
+        <!-- 展示类别详情 -->
+        <div v-if="categoryDetails.length">
+          <div v-for="item in categoryDetails" :key="item.id" class="category-item">
+            <!-- 使用递归组件渲染顶级类别和子类别 -->
+            <CategoryTree :category="item" />
+            <hr class="separator" />
+          </div>
         </div>
       </div>
     </div>
+  </div>
   </template>
 
-<style>
+<style scoped>
 #goods {
   display: flex;
   flex-direction: column;
@@ -35,12 +64,22 @@ import GoodsSidebar from '../components/GoodsSidebar.vue'
 
 .content-wrapper {
   display: flex;
-  margin-top: 160px; /* 留出顶栏高度的空间，具体高度视顶栏而定 */
 }
 
 .main-content {
-  flex-grow: 1;
+  margin-left: 250px; /* 与侧边栏宽度一致 */
   padding: 1rem;
-  margin-left: 250px; /* 留出侧边栏的宽度 */
+  flex: 1;
+}
+
+.category-item {
+  padding: 1rem 0;
+}
+
+.separator {
+  border: none;
+  border-top: 1px dashed #ddd;
+  margin: 1rem 0;
+  width: calc(100% - 250px); /* 使用计算宽度，占满侧边栏以外的所有宽度 */
 }
 </style>
