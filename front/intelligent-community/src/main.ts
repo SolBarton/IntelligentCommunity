@@ -6,6 +6,12 @@ import { createApp } from 'vue'
 import App from './App.vue'
 // @ts-ignore
 import Goods from './pages/Goods.vue'
+// @ts-ignore
+import Login from './pages/Login.vue'
+import router from './router'
 
-createApp(App).mount('#app')
+createApp(App)
+.use(router)
+.mount('#app')
 createApp(Goods).mount('#goods')
+createApp(Goods).mount("#login")

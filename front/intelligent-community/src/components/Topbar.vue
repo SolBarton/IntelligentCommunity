@@ -4,8 +4,8 @@
       <li><router-link to="/"><a>首页</a></router-link></li>
       <li><router-link to="/community-services"><a>社区服务</a></router-link></li>
       <li><router-link to="/orders"><a>我的订单</a></router-link></li>
-      <li><router-link to="/profile"><a>个人中心</a></router-link></li>
-      <li><router-link to="/products"><a>商品</a></router-link></li>
+      <li><router-link to="/login"><a>个人中心</a></router-link></li>
+      <li><router-link to="/"><a>商品</a></router-link></li>
     </ul>
   </nav>
 </template>
