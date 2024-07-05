@@ -34,8 +34,8 @@ const login = () => {
         </div>
         <button type="button" class="login-button" @click="login">登录</button>
         <div class="login-links">
-          <a href="#" class="forgot-password">忘记密码?</a>
-          <a href="#" class="register">立即注册</a>
+          <a href="#" class="forgot-password"><router-link to="/forget-password">忘记密码?</router-link></a>
+          <a href="#" class="register"><router-link to="/register">立即注册</router-link></a>
         </div>
       </form>
     </div>

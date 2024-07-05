@@ -20,31 +20,25 @@
   });
   </script>
   
-  <style scoped>
-  .category-main {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .category-children {
-    list-style: none;
-    padding-left: 1rem;
-<<<<<<< HEAD
-    display: flex; /* 使用 flex 布局 */
-    flex-wrap: wrap; /* 允许换行 */
-    gap: 10px; /* 控制三级类别之间的间距 */
-=======
->>>>>>> 2e85d44edc90d53cce960e3c1ab4374f86875ca3
-  }
-  
-  .category-children li {
-    font-size: 1rem;
-    color: #555;
-<<<<<<< HEAD
-    flex: 1 1 auto; /* 每个子项占据一定的宽度 */
-=======
->>>>>>> 2e85d44edc90d53cce960e3c1ab4374f86875ca3
-  }
+<style scoped>
+.category-main {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-children {
+  list-style: none;
+  padding-left: 1rem;
+  display: flex; /* 使用 flex 布局 */
+  flex-wrap: wrap; /* 允许换行 */
+  gap: 10px; /* 控制三级类别之间的间距 */
+}
+
+.category-children li {
+  font-size: 1rem;
+  color: #555;
+  flex: 1 1 auto; /* 每个子项占据一定的宽度 */
+}
   </style>
   
