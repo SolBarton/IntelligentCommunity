@@ -6,6 +6,9 @@ import ForgetPassword from '@/pages/ForgetPassword.vue'
 import UserProfile from '@/pages/UserProfile.vue'
 import ChangePassword from '@/pages/ChangePassword.vue'
 import ReCharge from '@/pages/ReCharge.vue'
+import Notice from '@/pages/Notice.vue'
+import ParkingManagement from '@/pages/ParkingManagement.vue'
+
 const routes = [
   { path: '/', component: Goods },
   { path: '/login', component: Login },
@@ -14,6 +17,8 @@ const routes = [
   { path: '/profile', component: UserProfile },
   { path: '/change-password', component: ChangePassword },
   { path: '/recharge', component: ReCharge },
+  { path: '/notice', component: Notice },
+  { path: '/parking-management', component: ParkingManagement }
 ]
 
 // new Router 变成 createRouter

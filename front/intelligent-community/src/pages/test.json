@@ -1,52 +1,16 @@
-<<<<<<< HEAD
-
-
-
 {
-    "code": "200",
-"msg":"成功",
-"data":[
+    "data": [
         {
-            "id":5,
-            "categoryName":"精品午餐",
-            "categoryType":2,
-            "parentId": 2,
-            "children":[
-                {
-                "id": 17,
-                "categoryName":"香肠",
-                "categoryType": 3,
-                "parentId": 5
-                },
-                {
-                    "id": 18,
-                    "categoryName":"熏肉",
-                    "categoryType": 3,
-                    "parentId": 5
-                }
-            ]
-        },
+            "id": 1,
+            "name": "十四公寓楼下",
+            "status": 1,
+            "type": 1
+        },   
         {
-            "id":65,
-            "categoryName":"学习用品",
-            "categoryType":2,
-            "parentId": 2,
-            "children":[
-                {
-                "id": 25,
-                "categoryName":"铅笔",
-                "categoryType": 3,
-                "parentId": 65
-                },
-                {
-                    "id": 18,
-                    "categoryName":"橡皮",
-                    "categoryType": 3,
-                    "parentId": 65
-                }
-            ]
+            "id": 2,
+            "name": "十三公寓楼下",
+            "status": 1,
+            "type": 1
         }
-        
-=======
-"code": 200"msg":“成功”"data": [uid”: 5,"categoryName":“精品午餐""categoryType":2,"parentId": 2.nuLL.'createTime"null,"updateTime":"children"":"id": 17,"categoryName":“香肠”"categoryType": 3,"parentId": 5"createTime": null."u鹼癍帖鹛p冮郧dateTime": null,"children": null"id": 18,"'categoryName":“蛋糕""categoryType": 3,"parentId": 5,"'createTime": null"繰揮pdateTime": null,"觏内Ұ帖hildren": null
->>>>>>> 2e85d44edc90d53cce960e3c1ab4374f86875ca3
+    ]
+}
